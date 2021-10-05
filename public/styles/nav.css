@@ -5,6 +5,8 @@ nav {
   color: #FFFFFF;
   align-items: flex-end;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 nav span {
@@ -21,5 +23,4 @@ nav div {
 
 nav div i {
   color: red;
-  size: 3;
 }
