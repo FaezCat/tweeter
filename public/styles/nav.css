@@ -5,7 +5,9 @@ nav {
   color: whitesmoke;
   align-items: flex-end;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1;
 }
 
