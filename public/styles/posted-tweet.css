@@ -2,6 +2,15 @@
 article {
   width: 100%;
   padding: 30px;
+  box-shadow: 0px 0px;
+}
+
+article:hover {
+  box-shadow: 5px 10px;
+}
+
+footer i:hover {
+  color: whitesmoke;
 }
 
 .posted-tweets {
