@@ -1,8 +1,8 @@
 nav {
   display: flex;
   height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #800000;
+  color: whitesmoke;
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
@@ -22,5 +22,5 @@ nav div {
 }
 
 nav div i {
-  color: red;
+  color: whitesmoke;
 }

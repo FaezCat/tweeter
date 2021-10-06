@@ -23,11 +23,11 @@ html {
    background-color: #f4f1ec;
    font-size: 24px;
    font-family: "Source Sans Pro", Sans-Serif;
-   justify-content: center;
  }
  
- main {
+ .container {
+  display: flex;
+  margin: auto;
   width: 90%;
   background-color: #ebae12;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
  }

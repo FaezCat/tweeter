@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <!-- Double Arrow Down Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
@@ -26,8 +26,11 @@
     <!-- Nav Bar CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- Body Header CSS -->
+    <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Container and New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,7 +42,7 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span>tweeter <i class="fas fa-crow"></i></span>
       <div>
         <b>Write</b> a new tweet
         <br>
@@ -57,11 +60,22 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <center><main class="container">
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corporis nulla repellat voluptate commodi temporibus deleniti maxime magni quae voluptates blanditiis repudiandae aspernatur quis, quasi beatae amet! Reprehenderit, beatae minima?</h1>
-      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque enim, nemo quidem ex commodi ipsam harum tempore repellat voluptate debitis autem, in quasi incidunt? Quas dolor animi quidem molestias debitis?</h2>
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquid, error dolores possimus perspiciatis tempora repellat fugit esse aperiam quod similique delectus iusto neque omnis perferendis quia, tempore inventore minus!</h3>
-    </center>
+    <main class="container">
+      <section class="new-tweet">
+        <!-- <h2>Compose Tweet</h2> -->
+        
+        <form method="POST" input type="text" action="/tweets/">
+          <label for="tweet-text"><b>What are you humming about?</b></label>
+          <br>
+          <textarea name="tweet-text" id="tweet-text"></textarea>
+          <br>
+          <div class="new-tweet">
+            <button id="tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+          </div>
+        
+        </form>
+      </section>
     </main>
   </body>
 </html>
