@@ -27,6 +27,7 @@ html {
  
  .container {
   display: flex;
+  flex-direction: column;
   margin: auto;
   width: 90%;
   background-color: #ebae12;

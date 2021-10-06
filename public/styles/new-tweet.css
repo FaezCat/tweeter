@@ -1,21 +1,14 @@
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
 #tweet-id {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 10px;
 }
-
-
 
 .new-tweet {
   display: block;
   position: relative;
   margin: auto;
-  flex-direction: column;
 }
 
 #tweet-text {
@@ -32,7 +25,6 @@
   background-color: #800000;
   font-family: "Bungee";
   color: whitesmoke;
-  padding: 5px;
   margin-left: 1.5em;
   margin-bottom: 0.5em;
 }

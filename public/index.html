@@ -52,7 +52,7 @@
       </div>
     </nav>
     
-    <header>
+    <header id="page-header">
       <div>
         <img src="/images/profile-hex.png"> 
       </div>
@@ -67,13 +67,25 @@
         <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" input type="text" action="/tweets/">
           <label for="tweet-text"><b>What are you humming about?</b></label>
-          <br>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="tweet-id">
             <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="posted-tweets">
+        <article>
+          <header>
+            Sample Header Text
+          </header>
+          <body>
+            Sample Main Text
+          </body>
+          <footer>
+            Sample Footer Text
+          </footer>
+        </article>
       </section>
     </main>
   </body>
