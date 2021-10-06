@@ -38,11 +38,9 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   
-    <!-- Form Character Counter JS -->
-  	<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  
+    
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -53,16 +51,16 @@
         <center><i class="fas fa-angle-double-down"></i></center>
       </div>
     </nav>
-
+    
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <div>
-          <center><h2>Amy Mansell</h2></center>
+        <center><h2>Amy Mansell</h2></center>
       </div>
     </header>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -73,10 +71,12 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div id="tweet-id">
             <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
     </main>
   </body>
+  <!-- Form Character Counter JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>

@@ -2,8 +2,14 @@ $(document).ready(function() {
   console.log("the DOM is ready!");
 })
 
-$(".tweet-text").on("click", (e) => {
-  console.log(e);
+$("#tweet-text").on("input", function() {
+  let counter = 140 - this.value.length;
+  $('.counter').text(counter);
+  if (counter < 0) {
+    $('.counter').css("color", "red");
+  } else {
+    $('.counter').css("color", "#545149");
+  }
 })
 
 
