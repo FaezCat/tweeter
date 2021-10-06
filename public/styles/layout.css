@@ -19,7 +19,7 @@ html {
  */
  
  body {
-   color: #545149;
+   color: darkred;
    background-color: #f4f1ec;
    font-size: 24px;
    font-family: "Source Sans Pro", Sans-Serif;
@@ -28,6 +28,7 @@ html {
  .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
   width: 90%;
   background-color: #ebae12;

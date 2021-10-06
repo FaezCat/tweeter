@@ -32,12 +32,17 @@
     <!-- Container and New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Posted-Tweet CSS -->
+    <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   
+    <!-- Form Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
   </head>
   
@@ -77,18 +82,20 @@
       <section class="posted-tweets">
         <article>
           <header>
-            Sample Header Text
+            <div><i class="fas fa-angle-double-down"></i></i>Faez</div>
+            <div>@FaezCat</div>
           </header>
-          <body>
-            Sample Main Text
-          </body>
-          <footer>
-            Sample Footer Text
+            Something ultra witty to impress my followers with. Look at me! I'm oh so clever!
+          <footer class="tweet-footer">
+            <div>10 days ago</div>
+            <div>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
           </footer>
         </article>
       </section>
     </main>
   </body>
-  <!-- Form Character Counter JS -->
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>
