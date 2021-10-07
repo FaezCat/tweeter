@@ -21,7 +21,7 @@ html {
  body {
    margin-top: 120px;
    color: darkred;
-   background-color: antiquewhite;
+   background-color: ghostwhite;
    font-size: 24px;
    font-family: "Source Sans Pro", Sans-Serif;
    background-image: url(https://www.transparenttextures.com/patterns/brick-wall-dark.png);
@@ -33,5 +33,5 @@ html {
   align-items: center;
   margin: auto;
   width: 85%;
-  background-color: antiquewhite;
+  background-color: ghostwhite;
  }

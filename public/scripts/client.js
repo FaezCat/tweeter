@@ -28,7 +28,6 @@ $(document).ready(function() {
         data: formData
       })
       .then(() => {
-        console.log(".then log")
         $('.posted-tweets').html("");
         $('#tweet-text').val("");
         $('.counter').html(140);
