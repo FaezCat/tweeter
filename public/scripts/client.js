@@ -27,9 +27,13 @@ $(document).ready(function() {
         url: url,
         data: formData
       })
-      // .then(() => {
-      //   $('.posted-tweets').load("client.js");
-      // })
+      .then(() => {
+        console.log(".then log")
+        $('.posted-tweets').html("");
+        $('#tweet-text').val("");
+        $('.counter').html(140);
+        loadTweets();
+      })
     }
   });
 
@@ -54,6 +58,7 @@ $(document).ready(function() {
       url: url,
     })
     .then((tweets) => {
+      tweets.reverse();
       renderTweets(tweets);
     });
   };
