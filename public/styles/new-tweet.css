@@ -8,7 +8,9 @@
 .new-tweet {
   display: block;
   position: relative;
+  width: 60%;
   margin: auto;
+  padding-top: 10px;
 }
 
 #tweet-text {

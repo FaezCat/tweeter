@@ -11,14 +11,26 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
 
-    const formData = $('form').serialize();
-    console.log(formData);
-
-    $.ajax({
-      method: "POST",
-      url: url,
-      data: formData
-    });
+    const tweetCharacters = document.querySelector(".counter").innerHTML;
+    
+    if (tweetCharacters < 0) {
+      return alert("Your tweet exceeds the 140 character limit!");
+    }
+    
+    if (tweetCharacters == 140) {
+      return alert("Your tweet cannot be blank - record your thoughts!");
+    } else {
+      const formData = $('form').serialize();
+      
+      $.ajax({
+        method: "POST",
+        url: url,
+        data: formData
+      })
+      .then(() => {
+        $('#tweet-text').text(null);
+      })
+    }
   });
 
   
@@ -49,21 +61,3 @@ $(document).ready(function() {
   loadTweets();
 
 });
-
-//   <section class="posted-tweets">
-//   <article>
-//     <header>
-//       <div><i class="fas fa-angle-double-down"></i>Faez</div>
-//       <div>@FaezCat</div>
-//     </header>
-//       Something ultra witty to impress my followers with. Look at me! I'm oh so clever!
-//     <footer class="tweet-footer">
-//       <div>10 days ago</div>
-//       <div>
-//         <i class="fa-solid fa-flag"></i>
-//         <i class="fa-solid fa-arrow-rotate-right"></i>
-//         <i class="fa-solid fa-heart"></i>
-//       </div>
-//     </footer>
-//   </article>
-// </section>
