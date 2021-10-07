@@ -30,6 +30,18 @@ const data = [
 
 $(document).ready(function() {
 
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+
+    const formData = $('form').serialize();
+    console.log(formData);
+
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: formData
+    });
+  });
 
   const createTweetElement = function(tweet) {
     const $tweet = $(`<article><header><div><img src=${tweet.user.avatars}>${tweet.user.name}</div><div>${tweet.user.handle}</div></header>${tweet.content.text}<footer class="tweet-footer"><div>${timeago.format(tweet.created_at)}</div><div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-arrow-rotate-right"></i><i class="fa-solid fa-heart"></i></div></footer></article>`);
