@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 10px;
+  font-family: "Bungee";
 }
 
 .new-tweet {
@@ -26,7 +27,6 @@
   display: flex;
   font-size: 20px;
   background-color: #800000;
-  font-family: "Bungee";
   color: whitesmoke;
   margin-left: 1.5em;
   margin-bottom: 0.5em;

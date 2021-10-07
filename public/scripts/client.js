@@ -6,20 +6,25 @@
 
 $(document).ready(function() {
   
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const url = "/tweets";
 
   $("form").on("submit", function(event) {
     event.preventDefault();
 
-    const tweetCharacters = document.querySelector(".counter").innerHTML;
+    const inputLength = $('#tweet-text').val().length;
     
-    if (tweetCharacters < 0) {
+    if (inputLength > 140) {
       return alert("Your tweet exceeds the 140 character limit!");
-    }
-    
-    if (tweetCharacters == 140) {
+    } else if (inputLength === 0) {
       return alert("Your tweet cannot be blank - record your thoughts!");
     } else {
+      
       const formData = $('form').serialize();
       
       $.ajax({
@@ -38,7 +43,8 @@ $(document).ready(function() {
 
   
   const createTweetElement = function(tweet) {
-    const $tweet = $(`<article><header><div><img src=${tweet.user.avatars}>${tweet.user.name}</div><div>${tweet.user.handle}</div></header>${tweet.content.text}<footer class="tweet-footer"><div>${timeago.format(tweet.created_at)}</div><div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-arrow-rotate-right"></i><i class="fa-solid fa-heart"></i></div></footer></article>`);
+    
+    const $tweet = $(`<article><header><div><img src=${tweet.user.avatars}>${tweet.user.name}</div><div>${tweet.user.handle}</div></header>${escape(tweet.content.text)}<footer class="tweet-footer"><div>${timeago.format(tweet.created_at)}</div><div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-arrow-rotate-right"></i><i class="fa-solid fa-heart"></i></div></footer></article>`);
     return $tweet;
   };
   
