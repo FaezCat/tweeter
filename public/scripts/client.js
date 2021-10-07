@@ -27,9 +27,9 @@ $(document).ready(function() {
         url: url,
         data: formData
       })
-      .then(() => {
-        $('#tweet-text').text(null);
-      })
+      // .then(() => {
+      //   $('.posted-tweets').load("client.js");
+      // })
     }
   });
 
