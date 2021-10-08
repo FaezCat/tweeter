@@ -14,6 +14,23 @@ html {
  * Global layout stuff
  */
  
+ @media only screen and (min-width: 1024px) {
+  .desktop-view {
+    display: flex;
+  }
+
+  #page-header {
+    width: 40%;
+    align-self: flex-start;
+    padding-top: 200px;
+  }
+
+  .container {
+    width: 60%;
+    align-self: center;
+  }
+ }
+
  body {
    margin-top: 120px;
    color: darkred;

@@ -26,3 +26,12 @@ nav div {
 nav div i {
   color: whitesmoke;
 }
+
+#nav-button {
+  background: maroon;
+  border: none;
+}
+
+#nav-button:hover {
+  box-shadow: 2.5px 5px;
+}
