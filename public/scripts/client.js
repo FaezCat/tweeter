@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   // event handler for submitting the tweet form
   // checks for an appropriate tweet length (cannot be null and must be under or equal to 140 chars) prior to submitting the tweet's data 
-  // refreshes the posted-tweets section 
+  // finally, also refreshes the posted-tweets section 
   $("form").on("submit", function(event) {
     event.preventDefault();
 

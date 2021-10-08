@@ -20,13 +20,13 @@ html {
   }
 
   #page-header {
-    width: 40%;
+    width: 45%;
     align-self: flex-start;
     padding-top: 200px;
   }
 
   .container {
-    width: 60%;
+    width: 55%;
     align-self: center;
   }
  }
@@ -40,7 +40,7 @@ html {
    color: darkred;
    background-color: ghostwhite;
    font-size: 24px;
-   font-family: "Source Sans Pro", Sans-Serif;
+   font-family: 'Source Sans Pro', Sans-Serif;
    background-image: url(https://www.transparenttextures.com/patterns/brick-wall-dark.png);
  }
  

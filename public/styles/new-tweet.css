@@ -1,9 +1,13 @@
+ /*
+ * Styling for the new tweet form itself
+ */
+
 #tweet-id {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 10px;
-  font-family: "Bungee";
+  font-family: 'Bungee';
 }
 
 .new-tweet {
