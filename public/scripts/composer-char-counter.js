@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  console.log("the DOM is ready!");
   
   // event listener handling the character counter for new tweets
-  // updated whenever the form's input count changes and applies red styling when the character counter drops below 0
+  // updates whenever the form's input count changes 
+  // applies red styling when the character counter drops below 0
   $("#tweet-text").on("input", function() {
     let counter = 140 - this.value.length;
     $('.counter').text(counter);

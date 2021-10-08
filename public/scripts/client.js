@@ -3,7 +3,7 @@ $(document).ready(function() {
   // hides the initial display-error div
   $('#display-error').slideUp(0);
   
-  // function later used to help format our tweet form input (removing scripts etc.)
+  // function later used to help format our tweet form input (outputs HTML only)
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -12,9 +12,9 @@ $(document).ready(function() {
 
   const url = "/tweets";
 
-  // event handler for submitting the tweet form which checks for appropriate tweet length 
-  // (not null and under or equal to 140 chars) prior to submitting the tweet's data and 
-  // refreshing the posted-tweets section
+  // event handler for submitting the tweet form
+  // checks for an appropriate tweet length (cannot be null and must be under or equal to 140 chars) prior to submitting the tweet's data 
+  // refreshes the posted-tweets section 
   $("form").on("submit", function(event) {
     event.preventDefault();
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
   // function which accepts tweet object data and then generates the dynamic HTML needed to render an individual tweet (see renderTweets next)
   const createTweetElement = function(tweet) {
     
-    const $tweet = $(`<article><header><div><img src=${tweet.user.avatars}>${tweet.user.name}</div><div>${tweet.user.handle}</div></header>${escape(tweet.content.text)}<footer class="tweet-footer"><div>${timeago.format(tweet.created_at)}</div><div><i class="fa-solid fa-flag"></i><i class="fa-solid fa-arrow-rotate-right"></i><i class="fa-solid fa-heart"></i></div></footer></article>`);
+    const $tweet = $(`<article><header><div><img src=${tweet.user.avatars}>${tweet.user.name}</div><div>${tweet.user.handle}</div></header>${escape(tweet.content.text)}<footer class="tweet-footer"><div>${timeago.format(tweet.created_at)}</div><div><i class="fa-solid fa-flag"></i><i class="fas fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer></article>`);
     return $tweet;
   };
   
